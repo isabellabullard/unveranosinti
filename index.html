@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <img id="boxTexture" src="assets/beso.jpg">
+      <img id="groundTexture" src="assets/floor.jpg">
+
+    </a-assets>
+
+    <a-box src="#boxTexture" position="0 2 0" rotation="0 0 0" scale="2 2 2"
+      animation="property: rotation; to: 360 0 0; dur: 2000; easing: linear; loop: true">
+    </a-box>
+
+    <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear">
+        <a-sphere position="10 2 0" color="red"></a-sphere>
+      </a-entity>
+
+ 
+      <img id="skyTexture" src="assets/Ocean.jpg">
+    </a-assets>
+    <a-gltf-model id="auto" src="assets/del.gltf"></a-gltf-model>
+  </a-assets>
+
+  <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
+  <a-sky color="lightblue"></a-sky>
+
+  <a-gltf-model src="#auto" position="3 0 -3" scale="1.5 1.5 1.5"></a-gltf-model>
+
+    <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
+
+    <a-sky src="#skyTexture"></a-sky>
+  </a-scene>
+</body>
+
+</html>
